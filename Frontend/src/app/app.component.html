@@ -1,0 +1,32 @@
+<header class="app-header">
+  <nav class="main-nav">
+    <div class="nav-container">
+      <!-- Brand -->
+      <a class="brand-link" routerLink="/">
+        <div class="logo">E</div>
+        <span class="brand-name">Commerce</span>
+      </a>
+
+      <!-- Nav links -->
+      <div class="nav-links">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/" routerLinkActive="active">
+              <i class="fa fa-shopping-bag"></i> Products
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/orders" routerLinkActive="active">
+              <i class="fa fa-list-alt"></i> Orders
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="main-content">
+  <app-product-form></app-product-form>
+  <router-outlet></router-outlet>
+</main>
