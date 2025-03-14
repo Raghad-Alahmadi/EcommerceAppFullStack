@@ -8,7 +8,7 @@ import { Product } from '../store/product.reducer';
   providedIn: 'root'
 })
 export class ProductService {
-  private apiUrl = 'https://fakestoreapi.com/products';
+  private apiUrl = 'http://localhost:5203/api/products';
 
   constructor(private http: HttpClient) { }
 

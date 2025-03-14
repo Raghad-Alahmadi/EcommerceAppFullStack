@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "Q58ZRRC/NhTp+K/PQRHMUDZcuPjIvUoYEkS1G3qKNWE=",
+  "Source": "service.ProductAPI",
+  "BasePath": "_content/service.ProductAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

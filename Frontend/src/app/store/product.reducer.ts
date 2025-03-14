@@ -8,10 +8,9 @@ export interface Product {
   description: string;
   category: string;
   image: string;
-  rating: {
-    rate: number;
-    count: number;
-  };
+  rate: number;
+  count: number;
+
 }
 
 export interface ProductState {
