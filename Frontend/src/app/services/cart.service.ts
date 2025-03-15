@@ -2,8 +2,7 @@ import { Injectable, PLATFORM_ID, Inject } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { isPlatformBrowser } from '@angular/common';
-import { Product } from '../store/product.reducer';
-
+import { Product } from '../store/product/product.reducer';
 export interface CartItem {
   product: Product;
   quantity: number;

@@ -4,9 +4,9 @@ import { Store, select } from '@ngrx/store';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { Product } from '../../store/product.reducer';
-import * as ProductActions from '../../store/product.actions';
-import { selectAllProducts, selectProductsLoading, selectProductsError } from '../../store/product.selectors';
+import { Product } from '../../store/product/product.reducer';
+import * as ProductActions from '../../store/product/product.actions';
+import { selectAllProducts, selectProductsLoading, selectProductsError } from '../../store/product/product.selectors';
 import { CartService } from '../../services/cart.service';
 
 @Component({

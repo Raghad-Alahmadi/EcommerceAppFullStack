@@ -4,15 +4,15 @@ import { Observable, BehaviorSubject, combineLatest } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { Product } from '../../store/product.reducer';
-import * as ProductActions from '../../store/product.actions';
-import * as ProductSelectors from '../../store/product.selectors';
+import { Product } from '../../store/product/product.reducer';
+import * as ProductActions from '../../store/product/product.actions';
+import * as ProductSelectors from '../../store/product/product.selectors';
 import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [CommonModule, RouterModule], // Add RouterModule for [routerLink]
+  imports: [CommonModule, RouterModule], 
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
@@ -76,7 +76,7 @@ export class ProductListComponent implements OnInit {
         if (document.body.contains(notification)) {
           document.body.removeChild(notification);
         }
-      }, 300); // Wait for fade out animation
+      }, 300);
     }, 3000);
   }
   
