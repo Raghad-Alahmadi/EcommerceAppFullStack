@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { of } from 'rxjs';
-import { catchError, map, mergeMap } from 'rxjs/operators';
+import { catchError, map, mergeMap, tap } from 'rxjs/operators';
 import { OrderService } from '../../services/order.service';
 import * as OrderActions from './order.actions';
 
@@ -34,10 +34,15 @@ export class OrderEffects {
   updateOrder$ = createEffect(() =>
     this.actions$.pipe(
       ofType(OrderActions.updateOrder),
+      tap(action => console.log('Effect: Updating order', action.order)), 
       mergeMap(action =>
         this.orderService.updateOrder(action.order).pipe(
+          tap(updatedOrder => console.log('Order updated successfully:', updatedOrder)),
           map(order => OrderActions.updateOrderSuccess({ order })),
-          catchError(error => of(OrderActions.updateOrderFailure({ error: error.message })))
+          catchError(error => {
+            console.error('Error updating order:', error);
+            return of(OrderActions.updateOrderFailure({ error: error.message || 'Failed to update order' }));
+          })
         )
       )
     )

@@ -1,0 +1,65 @@
+<div class="order-edit-page">
+    <div class="container">
+      <h1 class="page-title">Edit Order #{{ orderId }}</h1>
+  
+      <div *ngIf="loading" class="loading-spinner">
+        Loading order details...
+      </div>
+  
+      <form [formGroup]="orderForm" (ngSubmit)="onSubmit()" *ngIf="!loading" class="order-form">
+        <div class="form-group">
+          <label for="status">Order Status</label>
+          <select id="status" formControlName="status" class="form-control">
+            <option *ngFor="let status of statusOptions" [value]="status">
+              {{ status | titlecase }}
+            </option>
+          </select>
+        </div>
+  
+        <div class="form-group">
+          <label>Order Date</label>
+          <input type="datetime-local" formControlName="date" class="form-control">
+        </div>
+  
+        <div class="form-section">
+          <h3>Products</h3>
+          <div *ngIf="productIdsForm.length === 0" class="no-products">
+            No products in this order. Add some below.
+          </div>
+  
+          <ul formArrayName="productIds" class="product-list">
+            <li *ngFor="let product of productIdsForm.controls; let i = index" class="product-item">
+              <span class="product-name">{{ getProductName(product.value) }}</span>
+              <button type="button" class="btn-remove" (click)="removeProduct(i)">✕</button>
+            </li>
+          </ul>
+  
+          <div class="add-product">
+            <h4>Add Product</h4>
+            <div class="product-select">
+              <select #productSelect class="form-control">
+                <option value="" disabled selected>Select a product</option>
+                <option *ngFor="let product of availableProducts$ | async" [value]="product.id">
+                  {{ product.title }}
+                </option>
+              </select>
+              <button type="button" class="btn-add" (click)="addProduct(+productSelect.value)">Add</button>
+            </div>
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="totalAmount">Total Amount</label>
+          <div class="input-with-prefix">
+            <span class="prefix">$</span>
+            <input id="totalAmount" type="number" step="0.01" formControlName="totalAmount" class="form-control">
+          </div>
+        </div>
+  
+        <div class="form-actions">
+          <button type="button" class="btn-cancel" (click)="cancel()">Cancel</button>
+          <button type="submit" class="btn-save" [disabled]="orderForm.invalid">Save Changes</button>
+        </div>
+      </form>
+    </div>
+  </div>

@@ -1,24 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router, RouterModule } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Observable, forkJoin, of } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 import { Order } from '../../store/order/order.reducer';
-import { selectAllOrders } from '../../store/order/order.selectors';
-import { loadOrders, deleteOrder, updateOrder } from '../../store/order/order.actions';
+import { selectAllOrders, selectOrdersLoading } from '../../store/order/order.selectors';
+import { loadOrders, deleteOrder } from '../../store/order/order.actions';
 import { ProductService } from '../../services/product.service';
 import { Product } from '../../store/product/product.reducer';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-order',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './order.component.html',
   styleUrls: ['./order.component.css']
 })
 export class OrderComponent implements OnInit {
   orders$: Observable<Order[]>;
+  loading$: Observable<boolean>;
   products: Map<number, Product> = new Map();
   loadingProducts = false;
 
@@ -28,6 +29,7 @@ export class OrderComponent implements OnInit {
     private router: Router
   ) {
     this.orders$ = this.store.select(selectAllOrders);
+    this.loading$ = this.store.select(selectOrdersLoading);
   }
 
   ngOnInit(): void {
@@ -43,6 +45,7 @@ export class OrderComponent implements OnInit {
   }
   
   loadProductsForOrders(orders: Order[]): void {
+    // Get all unique product IDs from all orders
     const productIds = new Set<number>();
     orders.forEach(order => {
       if (order.productIds) {
@@ -54,9 +57,10 @@ export class OrderComponent implements OnInit {
     
     this.loadingProducts = true;
     
+    // Create an array of requests with error handling
     const productRequests = Array.from(productIds).map(id => 
       this.productService.getProduct(id).pipe(
-        catchError(() => of(null)) 
+        catchError(() => of(null)) // Return null for products that fail to load
       )
     );
     
@@ -80,21 +84,13 @@ export class OrderComponent implements OnInit {
     return this.products.get(id);
   }
   
-
-editOrder(order: Order): void {
-  const statuses: Array<'pending' | 'completed' | 'cancelled'> = ['pending', 'completed', 'cancelled'];
-  const currentIndex = statuses.indexOf(order.status.toLowerCase() as 'pending' | 'completed' | 'cancelled');
-  const nextIndex = (currentIndex + 1) % statuses.length;
+  // Navigate to edit page
+  editOrder(order: Order): void {
+    if (!order || !order.id) return;
+    this.router.navigate(['/orders', order.id, 'edit']);
+  }
   
-  const updatedOrder: Order = {
-    ...order,
-    status: statuses[nextIndex]
-  };
-  
-  this.store.dispatch(updateOrder({ order: updatedOrder }));
-}
-  
-  // Delete order method
+  // Delete order
   deleteOrder(orderId: number): void {
     if (confirm('Are you sure you want to delete this order?')) {
       this.store.dispatch(deleteOrder({ orderId }));
