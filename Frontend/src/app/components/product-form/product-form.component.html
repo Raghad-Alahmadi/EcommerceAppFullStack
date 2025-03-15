@@ -14,7 +14,7 @@
           <h4>{{ showForm ? 'Edit Product' : 'Add New Product' }}</h4>
         </div>
         
-        <div class="form-content" >
+        <div class="form-content">
           <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
             <!-- Basic Info Section -->
             <div class="form-section">
@@ -108,7 +108,6 @@
             </div>
           </form>
         </div>
-        
       </div>
     </div>
     
@@ -192,39 +191,41 @@
         </div>
 
         <!-- Products Table -->
-        <table class="products-table" *ngIf="filteredProducts.length > 0">
-          <thead>
-            <tr>
-              <th>Image</th>
-              <th>Product</th>
-              <th>Price</th>
-              <th>Category</th>
-              <th>Rating</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let product of filteredProducts">
-              <td class="product-image-cell">
-                <img [src]="product.image" [alt]="product.title" class="thumbnail">
-              </td>
-              <td>{{ product.title }}</td>
-              <td>${{ product.price.toFixed(2) }}</td>
-              <td>{{ product.category }}</td>
-              <td>
-                <div class="rating-display">
-                  <span>{{ product.rate }}</span>
-                  <i>★</i>
-                  <span>({{ product.count }})</span>
-                </div>
-              </td>
-              <td class="actions-cell">
-                <button type="button" class="edit-btn" (click)="editProduct(product)">Edit</button>
-                <button type="button" class="delete-btn" (click)="deleteProduct(product.id)">Delete</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-wrapper">
+          <table class="products-table" *ngIf="filteredProducts.length > 0">
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Rating</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let product of filteredProducts">
+                <td class="product-image-cell">
+                  <img [src]="product.image" [alt]="product.title" class="thumbnail">
+                </td>
+                <td>{{ product.title }}</td>
+                <td>${{ product.price.toFixed(2) }}</td>
+                <td>{{ product.category }}</td>
+                <td>
+                  <div class="rating-display">
+                    <span>{{ product.rate }}</span>
+                    <i>★</i>
+                    <span>({{ product.count }})</span>
+                  </div>
+                </td>
+                <td class="actions-cell">
+                  <button type="button" class="edit-btn" (click)="editProduct(product)">Edit</button>
+                  <button type="button" class="delete-btn" (click)="deleteProduct(product.id)">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         
         <!-- No Results Message -->
         <div class="empty-state" *ngIf="filteredProducts.length === 0">

@@ -3,8 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Migrations\\20250314125807_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:service.ProductAPI\\Migrations\\20250314125807_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.OrderAPI\\Migrations\\20250315110413_UpdateOrderModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:service.OrderAPI\\Migrations\\20250315110413_UpdateOrderModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60CFE997-3145-46CF-8A7D-EA302D61EE90}|service.OrderAPI\\service.OrderAPI.csproj|c:\\users\\ahuevo nice\\desktop\\ecommerceappfullstack\\backend\\service.orderapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60CFE997-3145-46CF-8A7D-EA302D61EE90}|service.OrderAPI\\service.OrderAPI.csproj|solutionrelative:service.orderapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60CFE997-3145-46CF-8A7D-EA302D61EE90}|service.OrderAPI\\service.OrderAPI.csproj|c:\\users\\ahuevo nice\\desktop\\ecommerceappfullstack\\backend\\service.orderapi\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60CFE997-3145-46CF-8A7D-EA302D61EE90}|service.OrderAPI\\service.OrderAPI.csproj|solutionrelative:service.orderapi\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60CFE997-3145-46CF-8A7D-EA302D61EE90}|service.OrderAPI\\service.OrderAPI.csproj|c:\\users\\ahuevo nice\\desktop\\ecommerceappfullstack\\backend\\service.orderapi\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60CFE997-3145-46CF-8A7D-EA302D61EE90}|service.OrderAPI\\service.OrderAPI.csproj|solutionrelative:service.orderapi\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60CFE997-3145-46CF-8A7D-EA302D61EE90}|service.OrderAPI\\service.OrderAPI.csproj|c:\\users\\ahuevo nice\\desktop\\ecommerceappfullstack\\backend\\service.orderapi\\data\\ordercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60CFE997-3145-46CF-8A7D-EA302D61EE90}|service.OrderAPI\\service.OrderAPI.csproj|solutionrelative:service.orderapi\\data\\ordercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60CFE997-3145-46CF-8A7D-EA302D61EE90}|service.OrderAPI\\service.OrderAPI.csproj|c:\\users\\ahuevo nice\\desktop\\ecommerceappfullstack\\backend\\service.orderapi\\models\\dto\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60CFE997-3145-46CF-8A7D-EA302D61EE90}|service.OrderAPI\\service.OrderAPI.csproj|solutionrelative:service.orderapi\\models\\dto\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60CFE997-3145-46CF-8A7D-EA302D61EE90}|service.OrderAPI\\service.OrderAPI.csproj|c:\\users\\ahuevo nice\\desktop\\ecommerceappfullstack\\backend\\service.orderapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{60CFE997-3145-46CF-8A7D-EA302D61EE90}|service.OrderAPI\\service.OrderAPI.csproj|solutionrelative:service.orderapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60CFE997-3145-46CF-8A7D-EA302D61EE90}|service.OrderAPI\\service.OrderAPI.csproj|c:\\users\\ahuevo nice\\desktop\\ecommerceappfullstack\\backend\\service.orderapi\\service.orderapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{60CFE997-3145-46CF-8A7D-EA302D61EE90}|service.OrderAPI\\service.OrderAPI.csproj|solutionrelative:service.orderapi\\service.orderapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60CFE997-3145-46CF-8A7D-EA302D61EE90}|service.OrderAPI\\service.OrderAPI.csproj|c:\\users\\ahuevo nice\\desktop\\ecommerceappfullstack\\backend\\service.orderapi\\service.orderapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{60CFE997-3145-46CF-8A7D-EA302D61EE90}|service.OrderAPI\\service.OrderAPI.csproj|solutionrelative:service.orderapi\\service.orderapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3A46282-C2AE-4EFC-B196-C0528B178044}|service.ProductAPI\\service.ProductAPI.csproj|c:\\users\\ahuevo nice\\desktop\\ecommerceappfullstack\\backend\\service.productapi\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3A46282-C2AE-4EFC-B196-C0528B178044}|service.ProductAPI\\service.ProductAPI.csproj|solutionrelative:service.productapi\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3A46282-C2AE-4EFC-B196-C0528B178044}|service.ProductAPI\\service.ProductAPI.csproj|c:\\users\\ahuevo nice\\desktop\\ecommerceappfullstack\\backend\\service.productapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D3A46282-C2AE-4EFC-B196-C0528B178044}|service.ProductAPI\\service.ProductAPI.csproj|solutionrelative:service.productapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3A46282-C2AE-4EFC-B196-C0528B178044}|service.ProductAPI\\service.ProductAPI.csproj|c:\\users\\ahuevo nice\\desktop\\ecommerceappfullstack\\backend\\service.productapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3A46282-C2AE-4EFC-B196-C0528B178044}|service.ProductAPI\\service.ProductAPI.csproj|solutionrelative:service.productapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3A46282-C2AE-4EFC-B196-C0528B178044}|service.ProductAPI\\service.ProductAPI.csproj|c:\\users\\ahuevo nice\\desktop\\ecommerceappfullstack\\backend\\service.productapi\\migrations\\20250314125807_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3A46282-C2AE-4EFC-B196-C0528B178044}|service.ProductAPI\\service.ProductAPI.csproj|solutionrelative:service.productapi\\migrations\\20250314125807_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Migrations\\20250314125540_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,14 +71,6 @@
       "RelativeMoniker": "D:0:0:{D3A46282-C2AE-4EFC-B196-C0528B178044}|service.ProductAPI\\service.ProductAPI.csproj|solutionrelative:service.productapi\\models\\dto\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3A46282-C2AE-4EFC-B196-C0528B178044}|service.ProductAPI\\service.ProductAPI.csproj|c:\\users\\ahuevo nice\\desktop\\ecommerceappfullstack\\backend\\service.productapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D3A46282-C2AE-4EFC-B196-C0528B178044}|service.ProductAPI\\service.ProductAPI.csproj|solutionrelative:service.productapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3A46282-C2AE-4EFC-B196-C0528B178044}|service.ProductAPI\\service.ProductAPI.csproj|c:\\users\\ahuevo nice\\desktop\\ecommerceappfullstack\\backend\\service.productapi\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3A46282-C2AE-4EFC-B196-C0528B178044}|service.ProductAPI\\service.ProductAPI.csproj|solutionrelative:service.productapi\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Migrations\\20250314125131_SeparateRating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:service.ProductAPI\\Migrations\\20250314125131_SeparateRating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -45,10 +85,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Migrations\\20250314123557_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:service.ProductAPI\\Migrations\\20250314123557_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3A46282-C2AE-4EFC-B196-C0528B178044}|service.ProductAPI\\service.ProductAPI.csproj|c:\\users\\ahuevo nice\\desktop\\ecommerceappfullstack\\backend\\service.productapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3A46282-C2AE-4EFC-B196-C0528B178044}|service.ProductAPI\\service.ProductAPI.csproj|solutionrelative:service.productapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -63,71 +99,115 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "20250314125807_initial.cs",
-              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Migrations\\20250314125807_initial.cs",
-              "RelativeDocumentMoniker": "service.ProductAPI\\Migrations\\20250314125807_initial.cs",
-              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Migrations\\20250314125807_initial.cs",
-              "RelativeToolTip": "service.ProductAPI\\Migrations\\20250314125807_initial.cs",
+              "Title": "20250315110413_UpdateOrderModel.cs",
+              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.OrderAPI\\Migrations\\20250315110413_UpdateOrderModel.cs",
+              "RelativeDocumentMoniker": "service.OrderAPI\\Migrations\\20250315110413_UpdateOrderModel.cs",
+              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.OrderAPI\\Migrations\\20250315110413_UpdateOrderModel.cs",
+              "RelativeToolTip": "service.OrderAPI\\Migrations\\20250315110413_UpdateOrderModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T12:58:07.389Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "20250314125540_initial.cs",
-              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Migrations\\20250314125540_initial.cs",
-              "RelativeDocumentMoniker": "service.ProductAPI\\Migrations\\20250314125540_initial.cs",
-              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Migrations\\20250314125540_initial.cs",
-              "RelativeToolTip": "service.ProductAPI\\Migrations\\20250314125540_initial.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T12:55:40.638Z",
+              "WhenOpened": "2025-03-15T11:04:13.439Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "20250314125131_SeparateRating.cs",
-              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Migrations\\20250314125131_SeparateRating.cs",
-              "RelativeDocumentMoniker": "service.ProductAPI\\Migrations\\20250314125131_SeparateRating.cs",
-              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Migrations\\20250314125131_SeparateRating.cs",
-              "RelativeToolTip": "service.ProductAPI\\Migrations\\20250314125131_SeparateRating.cs",
+              "Title": "service.OrderAPI.http",
+              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.OrderAPI\\service.OrderAPI.http",
+              "RelativeDocumentMoniker": "service.OrderAPI\\service.OrderAPI.http",
+              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.OrderAPI\\service.OrderAPI.http",
+              "RelativeToolTip": "service.OrderAPI\\service.OrderAPI.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-03-15T10:58:57.06Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OrderDto.cs",
+              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.OrderAPI\\Models\\Dto\\OrderDto.cs",
+              "RelativeDocumentMoniker": "service.OrderAPI\\Models\\Dto\\OrderDto.cs",
+              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.OrderAPI\\Models\\Dto\\OrderDto.cs",
+              "RelativeToolTip": "service.OrderAPI\\Models\\Dto\\OrderDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T12:51:31.174Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "service.ProductAPI\\Controllers\\ProductController.cs",
-              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "service.ProductAPI\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAAwGMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T12:23:58.845Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ProductDto.cs",
-              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Models\\Dto\\ProductDto.cs",
-              "RelativeDocumentMoniker": "service.ProductAPI\\Models\\Dto\\ProductDto.cs",
-              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Models\\Dto\\ProductDto.cs",
-              "RelativeToolTip": "service.ProductAPI\\Models\\Dto\\ProductDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T12:31:50.888Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-15T10:53:44.416Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.OrderAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "service.OrderAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.OrderAPI\\appsettings.json",
+              "RelativeToolTip": "service.OrderAPI\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-15T10:52:12.533Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrderContext.cs",
+              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.OrderAPI\\Data\\OrderContext.cs",
+              "RelativeDocumentMoniker": "service.OrderAPI\\Data\\OrderContext.cs",
+              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.OrderAPI\\Data\\OrderContext.cs",
+              "RelativeToolTip": "service.OrderAPI\\Data\\OrderContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T10:52:02.092Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.OrderAPI\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "service.OrderAPI\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.OrderAPI\\Models\\Order.cs",
+              "RelativeToolTip": "service.OrderAPI\\Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBIAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T10:51:19.745Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.OrderAPI\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "service.OrderAPI\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.OrderAPI\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "service.OrderAPI\\Controllers\\OrdersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T10:53:03.243Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.OrderAPI\\Program.cs",
+              "RelativeDocumentMoniker": "service.OrderAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.OrderAPI\\Program.cs",
+              "RelativeToolTip": "service.OrderAPI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T10:47:29.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "service.OrderAPI",
+              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.OrderAPI\\service.OrderAPI.csproj",
+              "RelativeDocumentMoniker": "service.OrderAPI\\service.OrderAPI.csproj",
+              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.OrderAPI\\service.OrderAPI.csproj",
+              "RelativeToolTip": "service.OrderAPI\\service.OrderAPI.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-15T10:58:09.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Models\\Product.cs",
               "RelativeDocumentMoniker": "service.ProductAPI\\Models\\Product.cs",
@@ -135,12 +215,11 @@
               "RelativeToolTip": "service.ProductAPI\\Models\\Product.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAQwCQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T12:22:22.149Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-14T12:22:22.149Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\appsettings.json",
               "RelativeDocumentMoniker": "service.ProductAPI\\appsettings.json",
@@ -148,60 +227,54 @@
               "RelativeToolTip": "service.ProductAPI\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-14T12:34:04.586Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-14T12:34:04.586Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProductContext.cs",
-              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Data\\ProductContext.cs",
-              "RelativeDocumentMoniker": "service.ProductAPI\\Data\\ProductContext.cs",
-              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Data\\ProductContext.cs",
-              "RelativeToolTip": "service.ProductAPI\\Data\\ProductContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T12:23:20.983Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "20250314125014_SeparateRating.cs",
-              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Migrations\\20250314125014_SeparateRating.cs",
-              "RelativeDocumentMoniker": "service.ProductAPI\\Migrations\\20250314125014_SeparateRating.cs",
-              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Migrations\\20250314125014_SeparateRating.cs",
-              "RelativeToolTip": "service.ProductAPI\\Migrations\\20250314125014_SeparateRating.cs",
+              "DocumentIndex": 12,
+              "Title": "20250314125807_initial.cs",
+              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Migrations\\20250314125807_initial.cs",
+              "RelativeDocumentMoniker": "service.ProductAPI\\Migrations\\20250314125807_initial.cs",
+              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Migrations\\20250314125807_initial.cs",
+              "RelativeToolTip": "service.ProductAPI\\Migrations\\20250314125807_initial.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T12:50:14.886Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-14T12:58:07.389Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "20250314123809_InitialCreate.cs",
-              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Migrations\\20250314123809_InitialCreate.cs",
-              "RelativeDocumentMoniker": "service.ProductAPI\\Migrations\\20250314123809_InitialCreate.cs",
-              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Migrations\\20250314123809_InitialCreate.cs",
-              "RelativeToolTip": "service.ProductAPI\\Migrations\\20250314123809_InitialCreate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 17,
+              "Title": "20250314125131_SeparateRating.cs",
+              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Migrations\\20250314125131_SeparateRating.cs",
+              "RelativeDocumentMoniker": "service.ProductAPI\\Migrations\\20250314125131_SeparateRating.cs",
+              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Migrations\\20250314125131_SeparateRating.cs",
+              "RelativeToolTip": "service.ProductAPI\\Migrations\\20250314125131_SeparateRating.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T12:38:10.063Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-14T12:51:31.174Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "20250314123557_InitialCreate.cs",
-              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Migrations\\20250314123557_InitialCreate.cs",
-              "RelativeDocumentMoniker": "service.ProductAPI\\Migrations\\20250314123557_InitialCreate.cs",
-              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Migrations\\20250314123557_InitialCreate.cs",
-              "RelativeToolTip": "service.ProductAPI\\Migrations\\20250314123557_InitialCreate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 15,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "service.ProductAPI\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "service.ProductAPI\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAAwGMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T12:35:57.236Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-14T12:23:58.845Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ProductDto.cs",
+              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Models\\Dto\\ProductDto.cs",
+              "RelativeDocumentMoniker": "service.ProductAPI\\Models\\Dto\\ProductDto.cs",
+              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Models\\Dto\\ProductDto.cs",
+              "RelativeToolTip": "service.ProductAPI\\Models\\Dto\\ProductDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T12:31:50.888Z"
             },
             {
               "$type": "Document",
@@ -211,10 +284,65 @@
               "RelativeDocumentMoniker": "service.ProductAPI\\Program.cs",
               "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Program.cs",
               "RelativeToolTip": "service.ProductAPI\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T12:23:37.572Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-14T12:23:37.572Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "20250314125540_initial.cs",
+              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Migrations\\20250314125540_initial.cs",
+              "RelativeDocumentMoniker": "service.ProductAPI\\Migrations\\20250314125540_initial.cs",
+              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Migrations\\20250314125540_initial.cs",
+              "RelativeToolTip": "service.ProductAPI\\Migrations\\20250314125540_initial.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T12:55:40.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ProductContext.cs",
+              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Data\\ProductContext.cs",
+              "RelativeDocumentMoniker": "service.ProductAPI\\Data\\ProductContext.cs",
+              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Data\\ProductContext.cs",
+              "RelativeToolTip": "service.ProductAPI\\Data\\ProductContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T12:23:20.983Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "20250314125014_SeparateRating.cs",
+              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Migrations\\20250314125014_SeparateRating.cs",
+              "RelativeDocumentMoniker": "service.ProductAPI\\Migrations\\20250314125014_SeparateRating.cs",
+              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Migrations\\20250314125014_SeparateRating.cs",
+              "RelativeToolTip": "service.ProductAPI\\Migrations\\20250314125014_SeparateRating.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T12:50:14.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "20250314123809_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Migrations\\20250314123809_InitialCreate.cs",
+              "RelativeDocumentMoniker": "service.ProductAPI\\Migrations\\20250314123809_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Migrations\\20250314123809_InitialCreate.cs",
+              "RelativeToolTip": "service.ProductAPI\\Migrations\\20250314123809_InitialCreate.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T12:38:10.063Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "20250314123557_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Migrations\\20250314123557_InitialCreate.cs",
+              "RelativeDocumentMoniker": "service.ProductAPI\\Migrations\\20250314123557_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\Migrations\\20250314123557_InitialCreate.cs",
+              "RelativeToolTip": "service.ProductAPI\\Migrations\\20250314123557_InitialCreate.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T12:35:57.236Z"
             }
           ]
         }
