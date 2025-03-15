@@ -30,14 +30,16 @@ This project is a complete e-commerce solution featuring a responsive frontend, 
 ```bash
 # Clone the repository
 git clone https://github.com/Raghad-Alahmadi/EcommerceAppFullStack.git
-
+```
 # Navigate to the project directory
+```bash
 cd EcommerceAppFullStack
-
+```
 # Install dependencies
+```bash
 npm install
 ng serve
-
+```
 
 ## Usage
 
