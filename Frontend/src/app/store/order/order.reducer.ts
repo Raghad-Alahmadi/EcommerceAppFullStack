@@ -4,13 +4,12 @@ import { Product } from '../product/product.reducer';
 
 // Define the Order model
 export interface Order {
-  id: number;
-  productIds: number[];
-  totalAmount: number;
-  date: string;
-  status: 'pending' | 'completed' | 'cancelled';
-}
-
+    id: number;
+    productIds: number[];
+    totalAmount: number;
+    date: string;
+    status: 'pending' | 'processing' | 'shipped' | 'completed' | 'cancelled';
+  }
 // Define the OrderState interface
 export interface OrderState {
   orders: Order[];
