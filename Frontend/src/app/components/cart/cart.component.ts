@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { CartService, CartItem } from '../../services/cart.service';
 import { Observable } from 'rxjs';
@@ -20,7 +20,7 @@ export class CartComponent {
   cartTotal$: Observable<number>;
   cartCount$: Observable<number>;
 
-  constructor(private cartService: CartService, private store: Store) {
+  constructor(private cartService: CartService, private store: Store, private router: Router) {
     this.cartItems$ = this.cartService.cart$;
     this.cartTotal$ = this.cartService.cartTotal$;
     this.cartCount$ = this.cartService.cartCount$;
@@ -58,19 +58,31 @@ export class CartComponent {
   }
 
   checkout(): void {
+    // Check if cart is empty
+    const cart = this.cartService.getCart();
+    if (cart.length === 0) {
+      alert('Your cart is empty');
+      return;
+    }
+  
     // Create an order from the cart items
     const order: Order = {
-      id: 0, // Will be set by the backend
-      products: this.cartService.getCart().map(item => item.product),
-      totalAmount: this.cartService.getCart().reduce((total, item) => total + (item.product.price * item.quantity), 0),
-      date: '', // Will be set by the backend
-      status: 'pending' // Initial status
+      id: 0, 
+      productIds: cart.map(item => item.product.id),
+      totalAmount: cart.reduce((total, item) => total + (item.product.price * item.quantity), 0),
+      date: new Date().toISOString(),
+      status: 'pending'
     };
-
+  
+    console.log('Creating order:', order); // Log the order
+  
     // Dispatch the create order action
     this.store.dispatch(OrderActions.createOrder({ order }));
-
+  
     // Clear cart after successful checkout
     this.cartService.clearCart();
+  
+    // Navigate to the order page
+    this.router.navigate(['/orders']);
   }
 }
