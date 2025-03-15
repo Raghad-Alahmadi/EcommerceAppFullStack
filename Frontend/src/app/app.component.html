@@ -11,13 +11,18 @@
       <div class="nav-links">
         <ul class="nav-list">
           <li class="nav-item">
-            <a class="nav-link" routerLink="/" routerLinkActive="active">
+            <a class="nav-link" routerLink="/products" routerLinkActive="active">
               <i class="fa fa-shopping-bag"></i> Products
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="/orders" routerLinkActive="active">
               <i class="fa fa-list-alt"></i> Orders
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/add-product" routerLinkActive="active">
+              <i class="fa fa-plus"></i> Add Product
             </a>
           </li>
         </ul>
@@ -27,6 +32,5 @@
 </header>
 
 <main class="main-content">
-  <app-product-form></app-product-form>
   <router-outlet></router-outlet>
 </main>

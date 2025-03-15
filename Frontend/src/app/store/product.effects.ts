@@ -43,6 +43,18 @@ export class ProductEffects {
       )
     )
   );
+  
+  updateProduct$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(ProductActions.updateProduct),
+      switchMap(({ product }) =>
+        this.productService.updateProduct(product).pipe(
+          map((updatedProduct: Product) => ProductActions.updateProductSuccess({ product: updatedProduct })),
+          catchError(error => of(ProductActions.updateProductFailure({ error })))
+        )
+      )
+    )
+  );
 
   constructor(
     private actions$: Actions,

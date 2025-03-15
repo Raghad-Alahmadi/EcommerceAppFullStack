@@ -8,7 +8,7 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 import { routes } from './app.routes';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import { productReducer } from './store/product.reducer';
-import { ProductEffects } from  './store/product.effects';
+import { ProductEffects } from './store/product.effects';
 
 export const appConfig: ApplicationConfig = {
   providers: [

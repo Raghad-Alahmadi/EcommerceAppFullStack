@@ -1,14 +1,14 @@
+// filepath: c:\Users\ahuevo nice\Desktop\EcommerceAppFullStack\Frontend\src\app\app.component.ts
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { CommonModule } from '@angular/common';
-import { ProductFormComponent } from './components/product-form/product-form.component';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, ProductFormComponent],
+  imports: [RouterLink, RouterLinkActive, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'frontend';
+  title = 'ecommerce-app';
 }

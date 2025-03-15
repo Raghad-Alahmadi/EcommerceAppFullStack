@@ -1,121 +1,240 @@
-<!-- Toggle Button Container -->
-<div class="toggle-container">
-  <button *ngIf="!showForm" class="open-form-btn" (click)="toggleForm()">
-    <i class="icon-plus">+</i>
-    Add New Product
-  </button>
-</div>
-
-<!-- Product Form -->
-<div class="product-container" *ngIf="showForm">
-  <div class="form-header">
-    <i class="icon-form">+</i>
-    <h4>Add New Product</h4>
-    <button class="close-btn" (click)="toggleForm()">×</button>
+<div class="product-management-page">
+  <!-- Page Header -->
+  <div class="page-header">
+    <h2>Product Management</h2>
   </div>
-  
-  <div class="form-content">
-    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
-      <!-- Basic Information Section -->
-      <div class="form-section">
-        <h5 class="section-title">Basic Information</h5>
-        
-        <div class="form-group">
-          <label class="input-label" for="title">Product Title</label>
-          <div class="input-wrapper">
-            <span class="input-icon">
-              <i class="tag-icon">#</i>
-            </span>
-            <input class="with-icon" id="title" formControlName="title" placeholder="Enter product name">
-          </div>
-          <div *ngIf="productForm.get('title')?.invalid && productForm.get('title')?.touched" class="error-message">
-            Title is required.
-          </div>
+
+  <!-- Two-column Layout -->
+  <div class="two-column-layout">
+    <!-- Form Column -->
+    <div class="form-column">
+      <div class="product-container">
+        <div class="form-header">
+          <i class="icon-form">+</i>
+          <h4>{{ showForm ? 'Edit Product' : 'Add New Product' }}</h4>
         </div>
-
-        <div class="form-row">
-          <div class="form-col">
-            <label class="input-label" for="price">Price</label>
-            <div class="input-group">
-              <span>$</span>
-              <input id="price" formControlName="price" type="number" placeholder="0.00">
+        
+        <div class="form-content" >
+          <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+            <!-- Basic Info Section -->
+            <div class="form-section">
+              <h5 class="section-title">Basic Information</h5>
+              
+              <div class="form-group">
+                <label class="input-label">Product Title</label>
+                <div class="input-wrapper">
+                  <input type="text" formControlName="title" placeholder="Enter product title">
+                </div>
+                <div class="error-message" *ngIf="productForm.get('title')?.touched && productForm.get('title')?.invalid">
+                  Product title is required
+                </div>
+              </div>
+              
+              <div class="form-row">
+                <div class="form-col">
+                  <label class="input-label">Price</label>
+                  <div class="input-group">
+                    <span>$</span>
+                    <input type="number" formControlName="price" placeholder="0.00">
+                  </div>
+                  <div class="error-message" *ngIf="productForm.get('price')?.touched && productForm.get('price')?.invalid">
+                    Valid price is required
+                  </div>
+                </div>
+                
+                <div class="form-col">
+                  <label class="input-label">Category</label>
+                  <select formControlName="category">
+                    <option value="">Select Category</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="clothing">Clothing</option>
+                    <option value="books">Books</option>
+                    <option value="home">Home & Kitchen</option>
+                    <option value="beauty">Beauty & Personal Care</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <div class="error-message" *ngIf="productForm.get('category')?.touched && productForm.get('category')?.invalid">
+                    Category is required
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label class="input-label">Description</label>
+                <textarea formControlName="description" placeholder="Enter product description" rows="4"></textarea>
+                <div class="error-message" *ngIf="productForm.get('description')?.touched && productForm.get('description')?.invalid">
+                  Description is required
+                </div>
+              </div>
             </div>
-            <div *ngIf="productForm.get('price')?.invalid && productForm.get('price')?.touched" class="error-message">
-              Price is required and must be positive.
+            
+            <!-- Image & Rating Section -->
+            <div class="form-section">
+              <h5 class="section-title">Image & Rating</h5>
+              
+              <div class="form-group">
+                <label class="input-label">Image URL</label>
+                <div class="input-wrapper">
+                  <input type="text" formControlName="image" placeholder="Enter image URL">
+                </div>
+                <div class="error-message" *ngIf="productForm.get('image')?.touched && productForm.get('image')?.invalid">
+                  Image URL is required
+                </div>
+              </div>
+              
+              <div class="form-row">
+                <div class="form-col">
+                  <label class="input-label">Rating (0-5)</label>
+                  <input type="number" formControlName="rate" min="0" max="5" step="0.1" placeholder="0.0">
+                  <div class="error-message" *ngIf="productForm.get('rate')?.touched && productForm.get('rate')?.invalid">
+                    Valid rating between 0-5 is required
+                  </div>
+                </div>
+                
+                <div class="form-col">
+                  <label class="input-label">Rating Count</label>
+                  <input type="number" formControlName="count" min="0" placeholder="0">
+                  <div class="error-message" *ngIf="productForm.get('count')?.touched && productForm.get('count')?.invalid">
+                    Valid count is required
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-
-          <div class="form-col">
-            <label class="input-label" for="category">Category</label>
+            
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+              <button type="button" class="cancel-btn" (click)="toggleForm()">Cancel</button>
+              <button type="submit" class="submit-btn" [disabled]="productForm.invalid">Save Product</button>
+            </div>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+    
+    <!-- Products List Column -->
+    <div class="list-column">
+      <div class="product-list-container">
+        <h3 class="list-title">Products List</h3>
+        
+        <!-- List Controls -->
+        <div class="list-controls">
+          <div class="search-bar">
             <div class="input-wrapper">
-              <select id="category" formControlName="category">
-                <option value="" disabled selected>Select a category</option>
-                <option value="electronics">Electronics</option>
-                <option value="clothing">Clothing</option>
-                <option value="books">Books</option>
-                <option value="home">Home & Kitchen</option>
-                <option value="beauty">Beauty & Personal Care</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div *ngIf="productForm.get('category')?.invalid && productForm.get('category')?.touched" class="error-message">
-              Category is required.
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Details Section -->
-      <div class="form-section">
-        <h5 class="section-title">Product Details</h5>
-        
-        <div class="form-group">
-          <label class="input-label" for="description">Description</label>
-          <textarea id="description" formControlName="description" rows="4" placeholder="Write details about the product"></textarea>
-          <div *ngIf="productForm.get('description')?.invalid && productForm.get('description')?.touched" class="error-message">
-            Description is required.
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label class="input-label" for="image">Image URL</label>
-          <input id="image" formControlName="image" placeholder="https://example.com/image.jpg">
-          <div *ngIf="productForm.get('image')?.invalid && productForm.get('image')?.touched" class="error-message">
-            Image URL is required.
-          </div>
-        </div>
-      </div>
-      
-      <!-- Rating Section -->
-      <div class="form-section">
-        <h5 class="section-title">Rating Details</h5>
-        
-        <div class="form-row">
-          <div class="form-col">
-            <label class="input-label" for="rate">Rating (0-5)</label>
-            <input id="rate" formControlName="rate" type="range" min="0" max="5" step="0.1">
-            <div *ngIf="productForm.get('rate')?.invalid && productForm.get('rate')?.touched" class="error-message">
-              Rating must be between 0 and 5.
+              <span class="input-icon">🔍</span>
+              <input 
+                type="text" 
+                class="with-icon" 
+                placeholder="Search products..." 
+                [(ngModel)]="searchTerm"
+                (keyup)="applyFilters()">
             </div>
           </div>
           
-          <div class="form-col">
-            <label class="input-label" for="count">Rating Count</label>
-            <input id="count" formControlName="count" type="number" placeholder="0">
-            <div *ngIf="productForm.get('count')?.invalid && productForm.get('count')?.touched" class="error-message">
-              Rating count must be positive.
+          <div class="category-filter">
+            <select [(ngModel)]="selectedCategory" (change)="applyFilters()">
+              <option value="">All Categories</option>
+              <option value="electronics">Electronics</option>
+              <option value="clothing">Clothing</option>
+              <option value="books">Books</option>
+              <option value="home">Home & Kitchen</option>
+              <option value="beauty">Beauty & Personal Care</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <button type="button" class="clear-filters-btn" (click)="resetFilters()">
+            Clear Filters
+          </button>
+        </div>
+        
+        <!-- Price Range -->
+        <div class="list-controls">
+          <div class="price-filter form-row">
+            <div class="form-col">
+              <label class="input-label">Min Price</label>
+              <div class="input-group">
+                <span>$</span>
+                <input type="number" [(ngModel)]="minPrice" placeholder="Min">
+              </div>
+            </div>
+            <div class="form-col">
+              <label class="input-label">Max Price</label>
+              <div class="input-group">
+                <span>$</span>
+                <input type="number" [(ngModel)]="maxPrice" placeholder="Max">
+              </div>
+            </div>
+            <div class="form-col" style="flex: 0 0 auto; align-self: flex-end;">
+              <button type="button" class="submit-btn" (click)="applyFilters()">
+                Apply
+              </button>
             </div>
           </div>
         </div>
-      </div>
-      
-      <!-- Action Buttons -->
-      <div class="form-section">
-        <div class="action-buttons">
-          <button type="button" class="cancel-btn" (click)="toggleForm()">Cancel</button>
-          <button type="submit" class="submit-btn">Add Product</button>
+        
+        <!-- Sort By -->
+        <div class="list-controls">
+          <div class="form-col">
+            <label class="input-label">Sort By</label>
+            <select [(ngModel)]="sortBy" (change)="applyFilters()">
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="rating">Rating</option>
+              <option value="title">Name</option>
+            </select>
+          </div>
+        </div>
+        
+        <!-- Results Count -->
+        <div class="results-info">
+          <p>Showing {{ filteredProducts.length }} of {{ products.length }} products</p>
+        </div>
+
+        <!-- Products Table -->
+        <table class="products-table" *ngIf="filteredProducts.length > 0">
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Category</th>
+              <th>Rating</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of filteredProducts">
+              <td class="product-image-cell">
+                <img [src]="product.image" [alt]="product.title" class="thumbnail">
+              </td>
+              <td>{{ product.title }}</td>
+              <td>${{ product.price.toFixed(2) }}</td>
+              <td>{{ product.category }}</td>
+              <td>
+                <div class="rating-display">
+                  <span>{{ product.rate }}</span>
+                  <i>★</i>
+                  <span>({{ product.count }})</span>
+                </div>
+              </td>
+              <td class="actions-cell">
+                <button type="button" class="edit-btn" (click)="editProduct(product)">Edit</button>
+                <button type="button" class="delete-btn" (click)="deleteProduct(product.id)">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <!-- No Results Message -->
+        <div class="empty-state" *ngIf="filteredProducts.length === 0">
+          <i>📦</i>
+          <p>No products match your search criteria</p>
+          <button type="button" class="clear-filters-btn" (click)="resetFilters()">
+            Reset Filters
+          </button>
         </div>
       </div>
-    </form>
+    </div>
   </div>
 </div>
