@@ -1,7 +1,6 @@
 <header class="app-header">
   <nav class="main-nav">
     <div class="nav-container">
-      <!-- Brand -->
       <a class="brand-link" routerLink="/">
         <div class="logo">E</div>
         <span class="brand-name">Commerce</span>
@@ -11,13 +10,25 @@
       <div class="nav-links">
         <ul class="nav-list">
           <li class="nav-item">
-            <a class="nav-link" routerLink="/" routerLinkActive="active">
+            <a class="nav-link" routerLink="/products" routerLinkActive="active">
               <i class="fa fa-shopping-bag"></i> Products
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="/orders" routerLinkActive="active">
               <i class="fa fa-list-alt"></i> Orders
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/add-product" routerLinkActive="active">
+              <i class="fa fa-plus"></i> Add Product
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/cart" routerLinkActive="active">
+              <i class="fa fa-shopping-cart"></i> Cart
+              <span class="cart-badge" *ngIf="cartCount$ | async as count">{{ count }}</span>
             </a>
           </li>
         </ul>
@@ -27,6 +38,5 @@
 </header>
 
 <main class="main-content">
-  <app-product-form></app-product-form>
   <router-outlet></router-outlet>
 </main>

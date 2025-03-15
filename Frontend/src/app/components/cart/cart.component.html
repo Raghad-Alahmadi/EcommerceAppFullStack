@@ -1,0 +1,97 @@
+<div class="cart-page">
+    <div class="container">
+      <h1 class="page-title">Your Shopping Cart</h1>
+  
+      <ng-container *ngIf="(cartCount$ | async) === 0; else cartContent">
+        <div class="empty-cart">
+          <div class="empty-cart-icon">
+            <i class="bi bi-cart-x"></i>
+          </div>
+          <h2>Your cart is empty</h2>
+          <p>Looks like you haven't added any products to your cart yet.</p>
+          <button class="continue-shopping-btn" routerLink="/products">
+            Continue Shopping
+          </button>
+        </div>
+      </ng-container>
+  
+      <ng-template #cartContent>
+        <div class="cart-container">
+          <!-- Cart items table -->
+          <div class="cart-items">
+            <table class="cart-table">
+              <thead>
+                <tr>
+                  <th class="item-col">Product</th>
+                  <th class="price-col">Price</th>
+                  <th class="quantity-col">Quantity</th>
+                  <th class="total-col">Total</th>
+                  <th class="action-col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of cartItems$ | async">
+                  <td class="item-col">
+                    <div class="cart-item">
+                      <img [src]="item.product.image" [alt]="item.product.title" class="item-image">
+                      <div class="item-details">
+                        <h4 class="item-title">{{ item.product.title }}</h4>
+                        <p class="item-category">{{ item.product.category }}</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="price-col">${{ item.product.price.toFixed(2) }}</td>
+                  <td class="quantity-col">
+                    <div class="quantity-control">
+                      <button class="quantity-btn" (click)="decrementQuantity(item)">−</button>
+                      <input 
+                        type="number" 
+                        [value]="item.quantity" 
+                        min="1" 
+                        max="99" 
+                        (change)="updateQuantity(item.product.id, $event)"
+                        class="quantity-input">
+                      <button class="quantity-btn" (click)="incrementQuantity(item)">+</button>
+                    </div>
+                  </td>
+                  <td class="total-col">${{ (item.product.price * item.quantity).toFixed(2) }}</td>
+                  <td class="action-col">
+                    <button class="remove-btn" (click)="removeItem(item.product.id)">
+                      <i class="bi bi-trash"></i> 
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+  
+          <!-- Cart summary -->
+          <div class="cart-summary">
+            <h3>Order Summary</h3>
+            <div class="summary-item">
+              <span>Items ({{ cartCount$ | async }})</span>
+              <span>${{ (cartTotal$ | async)?.toFixed(2) }}</span>
+            </div>
+            <div class="summary-item">
+              <span>Shipping</span>
+              <span>Free</span>
+            </div>
+            <div class="summary-divider"></div>
+            <div class="summary-total">
+              <span>Total</span>
+              <span>${{ (cartTotal$ | async)?.toFixed(2) }}</span>
+            </div>
+            <button class="checkout-btn" (click)="checkout()">
+              Proceed to Checkout
+            </button>
+            <button class="clear-cart-btn" (click)="clearCart()">
+              Clear Cart
+            </button>
+            <button class="continue-shopping-btn" routerLink="/products">
+              Continue Shopping
+            </button>
+          </div>
+        </div>
+      </ng-template>
+    </div>
+  </div>

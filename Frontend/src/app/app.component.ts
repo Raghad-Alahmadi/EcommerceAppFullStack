@@ -1,14 +1,21 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { ProductFormComponent } from './components/product-form/product-form.component';
+import { RouterModule } from '@angular/router';
+import { CartService } from './services/cart.service';
+import { Observable } from 'rxjs';
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, ProductFormComponent],
+  imports: [CommonModule, RouterModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'frontend';
+  title = 'ecommerce-app';
+  cartCount$: Observable<number>;
+  
+  constructor(private cartService: CartService) {
+    this.cartCount$ = this.cartService.cartCount$;
+  }
 }
