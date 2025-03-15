@@ -3,14 +3,16 @@ import { Store } from '@ngrx/store';
 import { Observable, BehaviorSubject, combineLatest } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { Product } from '../../store/product.reducer';
 import * as ProductActions from '../../store/product.actions';
 import * as ProductSelectors from '../../store/product.selectors';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule], // Add RouterModule for [routerLink]
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
@@ -27,7 +29,10 @@ export class ProductListComponent implements OnInit {
   // Filtered products
   products$: Observable<Product[]>;
 
-  constructor(private store: Store) {
+  constructor(
+    private store: Store,
+    private cartService: CartService
+  ) {
     // Get base observables from store
     this.allProducts$ = this.store.select(ProductSelectors.selectAllProducts);
     this.loading$ = this.store.select(ProductSelectors.selectProductsLoading);
@@ -49,12 +54,30 @@ export class ProductListComponent implements OnInit {
     this.store.dispatch(ProductActions.loadProducts());
   }
 
-  addProduct(product: Product): void {
-    this.store.dispatch(ProductActions.addProduct({ product }));
-  }
-
-  deleteProduct(productId: number): void {
-    this.store.dispatch(ProductActions.deleteProduct({ productId }));
+  // Add to cart method
+  addToCart(product: Product): void {
+    this.cartService.addToCart(product);
+    
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = 'cart-notification';
+    notification.innerHTML = `
+      <div class="notification-content">
+        <i class="bi bi-check-circle-fill"></i>
+        <span>Added to cart: ${product.title}</span>
+      </div>
+    `;
+    document.body.appendChild(notification);
+    setTimeout(() => notification.classList.add('show'), 10);
+    // Set a timeout to remove the notification
+    setTimeout(() => {
+      notification.classList.remove('show');
+      setTimeout(() => {
+        if (document.body.contains(notification)) {
+          document.body.removeChild(notification);
+        }
+      }, 300); // Wait for fade out animation
+    }, 3000);
   }
   
   // Filter methods
@@ -80,7 +103,7 @@ export class ProductListComponent implements OnInit {
     if (categorySelect) categorySelect.value = '';
   }
   
-  // Helper method to filter products
+  // filter products
   private filterProducts(products: Product[], searchTerm: string, category: string): Product[] {
     return products.filter(product => {
       // Apply search term filter

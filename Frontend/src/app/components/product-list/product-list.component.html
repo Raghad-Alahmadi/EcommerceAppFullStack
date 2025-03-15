@@ -32,13 +32,7 @@
     <!-- Loading state -->
     <div *ngIf="loading$ | async" class="loading-container">
       <div class="spinner"></div>
-      <p class="loading-text">Loading products...</p>
-    </div>
-    
-    <!-- Error state -->
-    <div *ngIf="error$ | async as error" class="error-message">
-      <i class="bi bi-exclamation-triangle-fill"></i>
-      <div>{{ error.message }}</div>
+      <p>Loading products...</p>
     </div>
     
     <!-- Product grid -->
@@ -48,34 +42,39 @@
           <div class="product-image">
             <img [src]="product.image" [alt]="product.title" loading="lazy">
           </div>
-          <div class="product-body">
-            <h5 class="product-title">{{ product.title }}</h5>
+          <div class="product-info">
+            <h3 class="product-title">{{ product.title }}</h3>
+            <div class="product-price">${{ product.price.toFixed(2) }}</div>
             <div class="product-rating">
-              <i class="bi bi-star-fill"></i>
-              <span>{{ product.rate || 0 }} ({{ product.count || 0 }} reviews)</span>
+              <span class="rating-stars">
+                <i class="bi bi-star-fill"></i> {{ product.rate }}
+              </span>
+              <span class="rating-count">({{ product.count }})</span>
             </div>
-            <p class="product-description">{{ product.description }}</p>
-            <div class="product-category">
-              <span class="category-tag">{{ product.category }}</span>
-            </div>
+            <p class="product-category">{{ product.category }}</p>
           </div>
-          <div class="product-footer">
-            <div class="product-price">${{ product.price | number:'1.2-2' }}</div>
-            <div class="product-actions">
-              <button class="delete-button" (click)="deleteProduct(product.id)">
-                <i class="bi bi-trash"></i> Delete
-              </button>
-            </div>
+          <div class="product-actions">
+            <button class="add-to-cart-btn" (click)="addToCart(product)">
+              <i class="bi bi-cart-plus"></i> Add to Cart
+            </button>
+            <button class="view-details-btn" [routerLink]="['/products', product.id]">
+              View Details
+            </button>
           </div>
         </div>
       </div>
     </div>
     
-    <!-- No products state -->
-    <div *ngIf="(products$ | async)?.length === 0 && !(loading$ | async) && !(error$ | async)" 
-         class="no-products">
-      <i class="bi bi-inbox"></i>
-      <p>No products found</p>
+    <!-- Empty state -->
+    <div *ngIf="(products$ | async)?.length === 0 && !(loading$ | async)" class="empty-state">
+      <div class="empty-icon">
+        <i class="bi bi-search"></i>
+      </div>
+      <h3>No products found</h3>
+      <p>Try adjusting your search or filter criteria</p>
+      <button class="clear-button" (click)="clearFilters()">
+        Clear Filters
+      </button>
     </div>
   </div>
 </div>

@@ -1,7 +1,6 @@
 <header class="app-header">
   <nav class="main-nav">
     <div class="nav-container">
-      <!-- Brand -->
       <a class="brand-link" routerLink="/">
         <div class="logo">E</div>
         <span class="brand-name">Commerce</span>
@@ -23,6 +22,13 @@
           <li class="nav-item">
             <a class="nav-link" routerLink="/add-product" routerLinkActive="active">
               <i class="fa fa-plus"></i> Add Product
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/cart" routerLinkActive="active">
+              <i class="fa fa-shopping-cart"></i> Cart
+              <span class="cart-badge" *ngIf="cartCount$ | async as count">{{ count }}</span>
             </a>
           </li>
         </ul>

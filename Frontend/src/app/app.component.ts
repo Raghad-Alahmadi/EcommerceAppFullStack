@@ -1,14 +1,21 @@
-// filepath: c:\Users\ahuevo nice\Desktop\EcommerceAppFullStack\Frontend\src\app\app.component.ts
 import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { CartService } from './services/cart.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, RouterOutlet],
+  imports: [CommonModule, RouterModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'ecommerce-app';
+  cartCount$: Observable<number>;
+  
+  constructor(private cartService: CartService) {
+    this.cartCount$ = this.cartService.cartCount$;
+  }
 }
