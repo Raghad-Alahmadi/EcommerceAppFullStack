@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\service.ProductAPI.csproj": {}
+    "C:\\Users\\ragha\\Source\\Repos\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\service.ProductAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\service.ProductAPI.csproj": {
+    "C:\\Users\\ragha\\Source\\Repos\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\service.ProductAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\service.ProductAPI.csproj",
+        "projectUniqueName": "C:\\Users\\ragha\\Source\\Repos\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\service.ProductAPI.csproj",
         "projectName": "service.ProductAPI",
-        "projectPath": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\service.ProductAPI.csproj",
-        "packagesPath": "C:\\Users\\ahuevo nice\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ahuevo nice\\Desktop\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\obj\\",
+        "projectPath": "C:\\Users\\ragha\\Source\\Repos\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\service.ProductAPI.csproj",
+        "packagesPath": "C:\\Users\\ragha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ragha\\Source\\Repos\\EcommerceAppFullStack\\Backend\\service.ProductAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ahuevo nice\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ragha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -42,9 +42,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net9.0": {
@@ -104,7 +104,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
